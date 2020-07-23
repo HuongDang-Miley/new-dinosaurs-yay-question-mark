@@ -28,7 +28,6 @@ const makeSingular = function (obj) {
 }
 
 
-
 const truncateSpecies = function (obj) {
   let cloneObj = Object.assign({}, obj)
   let name = cloneObj.species
@@ -54,3 +53,5 @@ module.exports = {
   truncateSpecies,
   makeExtinct
 }
+
+
