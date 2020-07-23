@@ -45,6 +45,7 @@ const makeExtinct = function (obj) {
   return cloneObj
 }
 
+ // Add Colin solution in the folder
 
 
 module.exports = {
