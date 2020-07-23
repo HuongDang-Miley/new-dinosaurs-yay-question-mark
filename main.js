@@ -1,54 +1,51 @@
-const makeDino = function(name, time, diet, extinct) {
+const makeDino = function (name, time, diet, extinct) {
   if (extinct === undefined) {
     return {
       species: name,
       period: time,
       carnivore: diet,
-      extinct: false    
+      extinct: false
     }
   } else {
     return {
       species: name,
       period: time,
       carnivore: diet,
-      extinct: extinct    
+      extinct: extinct
     }
   }
-
-
 }
 
-const makeSingular = function(obj) {
+
+
+const makeSingular = function (obj) {
   let cloneObj = Object.assign({}, obj)
   let name = cloneObj.species
-  if (name.slice(name.length-2) === 'us') {
-    cloneObj.species = name.slice(0, name.length-2)
+  if (name.slice(name.length - 2) === 'us') {
+    cloneObj.species = name.slice(0, name.length - 2)
   }
   return cloneObj
 }
 
-const truncateSpecies = function(obj) {
+
+
+const truncateSpecies = function (obj) {
   let cloneObj = Object.assign({}, obj)
   let name = cloneObj.species
   if (name.length > 7) {
-    cloneObj.species = name.slice(0, 7) +'...'
+    cloneObj.species = name.slice(0, 7) + '...'
   }
   return cloneObj
 }
 
-const dino = {
-  species: 'Brachiosaurus',
-  period: 'Jurassic',
-  carnivore: false,
-  extinct: false
-};
 
 
-const makeExtinct = function(obj) {
-let cloneObj = Object.assign({}, obj)
-cloneObj.extinct = true
-return cloneObj
+const makeExtinct = function (obj) {
+  let cloneObj = Object.assign({}, obj)
+  cloneObj.extinct = true
+  return cloneObj
 }
+
 
 
 module.exports = {
